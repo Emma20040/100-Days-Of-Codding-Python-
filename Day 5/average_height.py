@@ -15,5 +15,5 @@ for student in student_height:
     num_of_students += 1
 
 average_height= sum_h/num_of_students
-print(average_height)
+print(f"the average height is {average_height}")
     # print(sum(height))
