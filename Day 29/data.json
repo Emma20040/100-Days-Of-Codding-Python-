@@ -1,0 +1,22 @@
+{
+    "amazon": {
+        "email": "myeamil@gmail.com",
+        "password": "(t2Y1KVsANh$"
+    },
+    "Ebay": {
+        "email": "myeamil@gmail.com",
+        "password": "1&$eo%03XafvAn*"
+    },
+    "Linkedin": {
+        "email": "myeamil@gmail.com",
+        "password": "Isk$6!RhfelC8"
+    },
+    "python.com": {
+        "email": "myeamil@gmail.com",
+        "password": "0Xj%HioOY6l4&Nr"
+    },
+    "django.org": {
+        "email": "myeamil@gmail.com",
+        "password": "rnt!lv61Gl8nB7N)"
+    }
+}
