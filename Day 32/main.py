@@ -1,7 +1,7 @@
 import smtplib
 
-my_email = "email"
-password= "password"
+my_email = "emmanuelfongong10@gmail.com"
+password= "tvxctuenoostquel"
 
 with smtplib.SMTP("smtp.gmail.com") as connection:
 # encrypt email
