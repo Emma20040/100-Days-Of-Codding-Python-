@@ -3,6 +3,7 @@ import requests
 
 GENDER = "male"
 WEIGHT_KG = float(64.2)
+
 HEIGHT_CM = float(174)
 AGE = int(210)
 
