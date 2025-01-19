@@ -1,0 +1,16 @@
+body{
+    background-color: rgba(234, 244, 241, 0.795);
+}
+
+hr{
+    /* background-color:white; */
+    border-style:none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 10px;
+    width:  30%;
+}
+
+h1, h3{
+    color: aqua;
+}
