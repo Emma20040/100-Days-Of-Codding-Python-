@@ -8,7 +8,8 @@ from spotipy.oauth2 import SpotifyOAuth
 CLIENT_ID = "d946ad2c024d420da3556aea0b763ecf"
 CLIENT_SECRET = "1294bfa3e0664e58b85ac21f77ab37eb"
 REDIRECT_URI = "http://localhost:8888" 
-SCOPE = "user-library-read user-modify-playback-state"
+SCOPE ="playlist-modify-private playlist-modify-public"
+# SCOPE = "user-library-read user-modify-playback-state"
 
 URL ="https://www.billboard.com/charts/hot-100/#"
 
@@ -27,7 +28,8 @@ print(song_title)
 
 # Authenticate and get user access token
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET,
-                                               redirect_uri=REDIRECT_URI, scope=SCOPE))
+                                               redirect_uri=REDIRECT_URI, scope=SCOPE, show_dialog=True,
+                                                cache_path="token.txt", requests_timeout=30))
 
 # Fetch the current user's saved tracks
 results = sp.current_user_saved_tracks()
@@ -53,3 +55,6 @@ playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", p
 print(playlist)
 
 sp.user_playlist_add_tracks(user=user_id, playlist_id=playlist["id"], tracks=song_uris)
+
+result = sp.search(q="track:Shape of You year:2017", type="track")
+print(result)
