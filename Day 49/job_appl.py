@@ -17,7 +17,7 @@ email = driver.find_element(By.NAME, "session_key")
 email.send_keys("emmanuelfongong10@gmail.com")
 
 password = driver.find_element(By.NAME, "session_password")
-password.send_keys("emmnkw04")
+password.send_keys("password")
 
 signin =driver.find_element(By.XPATH, '//*[@id="organic-div"]/form/div[4]')
 signin.click()
