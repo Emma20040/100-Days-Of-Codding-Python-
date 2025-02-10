@@ -3,12 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import ElementClickInterceptedException
 
 chrome_driver_path = r"D:\100 days of python\chromedriver-win64\chromedriver.exe"
 SERVICE = Service(chrome_driver_path)
 
 # login info
-USERNAME ='wanyne.yorkies'
+USERNAME =''
 PASSWORD =''
 
 class InstagramFollower():
