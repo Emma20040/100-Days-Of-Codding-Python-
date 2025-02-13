@@ -8,8 +8,8 @@ STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 STOCK_API_KEY ="J8FH0Q53C50GV9X8"
 NEWS_API_KEY ="7a8bce9b727c484a92a1e97d036d61bc"
-TWILIO_SID = "YOUR TWILIO ACCOUNT SID"
-TWILIO_AUTH_TOKEN = "YOUR TWILIO AUTH TOKEN"
+TWILIO_SID = ""
+TWILIO_AUTH_TOKEN = ""
 
    
 
@@ -63,8 +63,8 @@ client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 for article in formatted_article:
         message = client.messages.create(
             body=article,
-            from_="my virtual number",
-            to="reciever number"
+            from_="+15075026348",
+            to="+237678209349"
         )
  
 

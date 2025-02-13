@@ -74,5 +74,6 @@ while i < min_length:
     
     i +=1
 sleep(30)
-spreed_sheet= ''
-
+# spreed_sheet= 'https://docs.google.com/forms/d/14X_0Tw2JW6UswH61v03bmp5E-w4aRIKTk0x1ZAM7f7M/edit#responses'
+# sheet_button= driver.find_element(By.CSS_SELECTOR, 'div.uArJ5e.cd29Sd.UQuaGc.kCyAyd.l3F1ye.M9Bg4d[jsname="ksKsZd"]')
+# <div role="button" class="uArJ5e cd29Sd UQuaGc kCyAyd l3F1ye M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" aria-label="View in Sheets. Opens linked spreadsheet" tabindex="0" data-tooltip="Opens linked spreadsheet" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="Fvio9d MbhUzd" jsname="ksKsZd" style="top: 22px; left: 23.0521px; width: 162px; height: 162px;"></div><div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue cd29Sd"><span class="E6FpNe Ce1Y1c"><span class="CpxKpe"><div class="foqfDc"><div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-hDEnYe-nllRtd" aria-hidden="true">&nbsp;</div><div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-hDEnYe-nllRtd" aria-hidden="true">&nbsp;</div></div></span></span><span class="NPEfkd RveJvd snByac">View in Sheets</span></span></div>
