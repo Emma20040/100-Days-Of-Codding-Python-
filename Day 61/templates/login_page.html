@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+<form method ="POST" action ='{{ url_for("login_user")}}'>
+    {{form.csrf_token}}
+    <p>
+    {{ form.name.label }} <br> {{ form.name(size=30) }}
+    {% if form.name.error%}
+    <ul >{% for error in form.name.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    {% endif %}
+    </p>
+    <p></p>
+    {{form.email.label}} <br> {{form.email(size= 30)}}
+    </p>
+    {{form.password.label}} <br> {{form.password(size =30)}} 
+    {% if form.password.error %}
+    <ul> {% for error in form.password.errors %}
+        <li>{{error}}</li>
+        {% endfor %}
+         </ul>
+    {% endif %}
+    <br>
+   <button type="submit"> {{form.submit.label}}</button>
+    <!-- <input type="submit" value="Login"> -->
+</form>
+
+</body>
+</html>
