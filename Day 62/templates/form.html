@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cafe form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      </head>
+</head>
+<body>
+    <!-- form -->
+    <form method="POST", action="{{url_for('form_page')}}">
+        {{form.csrf_token}}
+        <div class="mb-3">
+            {{form.cafe_name.label}}<br>  {{ form.cafe_name(size=60) }}
+          
+        </div>
+        <div class="mb-3">
+          {{form.cafe_url.label}} <br> {{ form.cafe_url(size=60)}}
+        </div>
+
+        <div class="mb-3">
+            {{form.opening_time.label}} <br> {{form.opening_time(size=60)}}
+          </div>
+
+          <div class="mb-3">
+            {{form.clossing_time.label}} <br> {{form.clossing_time(size=60)}}
+          </div>
+
+          <div class="mb-3">
+            {{form.rating.label}} <br> {{form.rating(size=60)}}
+          </div>
+
+          <div class="mb-3">
+            {{form.wifi_strnght.label}} <br> {{form.wifi_strnght(size=60)}}
+          </div>
+
+          <div class="mb-3">
+            {{form.power_a.label}} <br> {{form.power_a(size=60)}}
+          </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">{{form.submit.label}}</button>
+      </form>
+
+
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
