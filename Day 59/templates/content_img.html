@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>about</title>
+        <title>post img</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -15,17 +15,24 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
+    <body style ="background-color:rgb(242, 244, 240)">
         <!-- Navigation-->
-        {%include 'header.html' %}
+        {% include 'header.html' %}
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('static/img/about-bg.jpg')">
+        <header class="masthead d-flex align-items-center justify-content-center" style="background-image: url('{{posts.image_url}}'); background-size: cover; background-position: center; height: 500px; width: 100%; " >
+            
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="page-heading">
-                            <h1>About Me</h1>
-                            <span class="subheading">This is what I do.</span>
+                    <div class="col-md-10 col-lg-80 col-xl-7">
+                        <div class="page-heading text-center">
+                            <h1>{{posts.title}}</h1>
+                            <span class="subheading">{{posts.subtitle}}</span>
+
+                            <p class="post-meta">
+                                Posted by
+                                <a href="#!"> {{posts.author.name}} </a>
+                               on {{posts.created_at.strftime('%Y-%m-%d')}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -36,13 +43,15 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>I am a passionate full-stack web developer, data scientist, and machine learning engineer with a strong focus on backend development. I specialize in Django and Node.js for web development and work with databases like MySQL, PostgreSQL, and MongoDB. My expertise extends beyond web development into data science and machine learning, where I analyze data, build predictive models, and develop intelligent systems.</p>
-                        <p>To enhance my programming skills, I am committed to a 100 Days of Coding challenge in Python, where I build projects that reinforce my knowledge in software development, data science, and artificial intelligence. As a computer science student, I am continuously expanding my expertise, aiming to bridge the gap between software development, data-driven decision-making, and security.</p>
-                        <p>I am always eager to learn, innovate, and apply my knowledge to solve real-world problems in technology.</p>
+                        {{posts.blog_content}}
+                    </div>
                 </div>
+                <a class="btn btn-primary text-uppercase" href="{{url_for('edit_post',  id=posts.id)}}">Edit Post</a>
+                <a href="{{ url_for('delete_post', post_id=posts.id) }}" class="btn btn-danger">Delete Post</a>
+                
             </div>
         </main>
-        
+       
         <!-- Footer-->
        {% include 'footer.html' %}
         <!-- Bootstrap core JS-->
