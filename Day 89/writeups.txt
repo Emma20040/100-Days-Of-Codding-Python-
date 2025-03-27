@@ -1,0 +1,1 @@
+this text will disappear if i don't press any key for 5 seconds
