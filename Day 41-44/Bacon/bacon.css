@@ -1,0 +1,19 @@
+/* using tag selectors */
+h1{
+    color: red;
+}
+
+/* using class selectors */
+.code{
+    background-color: red;
+}
+.pic:hover{
+    border-radius: 100%;
+    /* background-color: yellow; */
+}
+
+/* using ID selectors */
+#line1{
+    font-style: italic;
+    font-weight: bold;
+}
